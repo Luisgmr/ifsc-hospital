@@ -1,4 +1,4 @@
-package br.edu.ifsc.hospital.view.components;
+package br.edu.ifsc.hospital.view.components.subcomponents;
 
 import br.edu.ifsc.hospital.Main;
 

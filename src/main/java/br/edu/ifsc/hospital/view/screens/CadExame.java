@@ -23,7 +23,7 @@ public class CadExame extends HospitalCadPanel {
 
         line2.add(statusInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar exame", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar exame", null);
         cadastrarButton.setPreferredSize(new Dimension(200, 35));
         cadastrarButton.addActionListener(e -> cadastrarExame());
 

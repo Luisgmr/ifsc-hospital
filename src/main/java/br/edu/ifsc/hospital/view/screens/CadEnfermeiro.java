@@ -57,7 +57,7 @@ public class CadEnfermeiro extends HospitalCadPanel {
         line6.add(loginInput);
         line6.add(senhaInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar enfermeiro", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar enfermeiro", null);
         cadastrarButton.setPreferredSize(new Dimension(200, 35));
         cadastrarButton.addActionListener(e -> cadastrarEnfermeiro());
 

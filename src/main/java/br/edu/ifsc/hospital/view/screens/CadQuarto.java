@@ -23,7 +23,7 @@ public class CadQuarto extends HospitalCadPanel {
         line2.add(statusInput);
         line2.add(alaInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar quarto", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar quarto", null);
         cadastrarButton.setPreferredSize(new Dimension(250, 35));
         cadastrarButton.addActionListener(e -> cadastrarQuarto());
 

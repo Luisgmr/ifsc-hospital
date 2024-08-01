@@ -1,5 +1,7 @@
 package br.edu.ifsc.hospital.view.components;
 
+import br.edu.ifsc.hospital.view.components.subcomponents.HospitalTextField;
+
 import javax.swing.*;
 import java.awt.*;
 

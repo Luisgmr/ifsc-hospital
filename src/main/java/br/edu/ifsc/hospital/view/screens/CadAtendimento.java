@@ -53,7 +53,7 @@ public class CadAtendimento extends HospitalCadPanel {
 
         line8.add(observacoesInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar atendimento", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar atendimento", null);
         cadastrarButton.setPreferredSize(new Dimension(200, 35)); // Definindo tamanho para o botão
         cadastrarButton.addActionListener(e -> cadastrarAtendimento());
 

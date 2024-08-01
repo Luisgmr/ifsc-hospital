@@ -27,7 +27,7 @@ public class CadLote extends HospitalCadPanel {
         line2.add(dataValidadeInput);
         line3.add(statusInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar lote", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar lote", null);
         cadastrarButton.setPreferredSize(new Dimension(250, 35));
         cadastrarButton.addActionListener(e -> cadastrarLote());
 

@@ -2,6 +2,7 @@ package br.edu.ifsc.hospital.view.screens;
 
 import br.edu.ifsc.hospital.Main;
 import br.edu.ifsc.hospital.view.components.*;
+import br.edu.ifsc.hospital.view.components.subcomponents.HospitalComboBox;
 
 import javax.swing.*;
 import java.awt.*;

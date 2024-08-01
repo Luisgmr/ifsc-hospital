@@ -20,7 +20,7 @@ public class CadAla extends HospitalCadPanel {
         line1.add(descricaoInput);
         line2.add(statusInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar ala", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar ala", null);
         cadastrarButton.setPreferredSize(new Dimension(160, 35)); // Definindo tamanho para o botão
         cadastrarButton.addActionListener(e -> cadastrarAla());
 

@@ -1,5 +1,7 @@
 package br.edu.ifsc.hospital.view.components;
 
+import br.edu.ifsc.hospital.view.components.subcomponents.HospitalComboBox;
+
 import javax.swing.*;
 import java.awt.*;
 

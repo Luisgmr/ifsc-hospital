@@ -56,7 +56,7 @@ public class CadMedico extends HospitalCadPanel {
         line6.add(loginInput);
         line6.add(senhaInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar médico", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar médico", null);
         cadastrarButton.setPreferredSize(new Dimension(250, 35));
         cadastrarButton.addActionListener(e -> cadastrarMedico());
 

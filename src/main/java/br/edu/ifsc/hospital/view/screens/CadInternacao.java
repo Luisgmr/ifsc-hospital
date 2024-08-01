@@ -30,7 +30,7 @@ public class CadInternacao extends HospitalCadPanel {
         line3.add(statusInput);
         line3.add(consultaInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar internação", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar internação", null);
         cadastrarButton.setPreferredSize(new Dimension(250, 35));
         cadastrarButton.addActionListener(e -> cadastrarInternacao());
 

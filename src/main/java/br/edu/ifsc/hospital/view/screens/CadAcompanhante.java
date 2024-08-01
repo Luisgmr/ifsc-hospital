@@ -31,7 +31,7 @@ public class CadAcompanhante extends HospitalCadPanel {
         line3.add(emailInput);
         line3.add(statusInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar acompanhante", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar acompanhante", null);
         cadastrarButton.addActionListener(e -> cadastrarAcompanhante());
 
         line4.add(cadastrarButton);

@@ -51,7 +51,7 @@ public class CadFornecedor extends HospitalCadPanel {
 
         line6.add(contatoInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar fornecedor", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar fornecedor", null);
         cadastrarButton.setPreferredSize(new Dimension(250, 35));
         cadastrarButton.addActionListener(e -> cadastrarFornecedor());
 

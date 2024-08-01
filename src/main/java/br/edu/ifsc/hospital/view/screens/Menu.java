@@ -40,7 +40,7 @@ public class Menu extends JFrame {
         Menu.navButtonSelected = navButtonSelected;
     }
 
-    HospitalPanel mainPanel = new HospitalPanel(300, 300, Color.RED);
+    HospitalPanel mainPanel = new HospitalPanel(300, 300, Color.WHITE);
 
     public void setMainPanel(HospitalPanel mainPanel) {
         // Remove o painel anterior se existir
@@ -100,6 +100,9 @@ public class Menu extends JFrame {
         add(leftPanel);
         mainPanel.setPosition(leftPanel.getWidth(), 0);
         mainPanel.setSize(getWidth() - leftPanel.getWidth(), getHeight());
+
+        mainPanel.add(new HospitalImage(730, 720, "telainicial.png"));
+
         add(mainPanel);
 
         System.out.println(mainPanel.getWidth() + " " + mainPanel.getHeight());

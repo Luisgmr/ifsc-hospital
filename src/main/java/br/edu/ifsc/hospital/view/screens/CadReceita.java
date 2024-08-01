@@ -24,7 +24,7 @@ public class CadReceita extends HospitalCadPanel {
         line2.add(observacaoInput);
         line3.add(statusInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar receita", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar receita", null);
         cadastrarButton.setPreferredSize(new Dimension(250, 35));
         cadastrarButton.addActionListener(e -> cadastrarReceita());
 

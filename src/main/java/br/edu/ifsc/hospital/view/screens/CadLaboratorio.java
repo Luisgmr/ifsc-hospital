@@ -22,7 +22,7 @@ public class CadLaboratorio extends HospitalCadPanel {
         line2.add(contatoInput);
         line2.add(statusInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar laboratório", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar laboratório", null);
         cadastrarButton.setPreferredSize(new Dimension(250, 35));
         cadastrarButton.addActionListener(e -> cadastrarLaboratorio());
 

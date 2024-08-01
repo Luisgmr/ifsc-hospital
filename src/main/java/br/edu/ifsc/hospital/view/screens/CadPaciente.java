@@ -51,7 +51,7 @@ public class CadPaciente extends HospitalCadPanel {
         line5.add(logradouroInput);
         line5.add(complementoInput);
 
-        line6.add(new HospitalButton("Cadastrar paciente", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14));
+        line6.add(new HospitalButton("Cadastrar paciente", null));
 
         add(line1);
         add(Box.createVerticalStrut(15));

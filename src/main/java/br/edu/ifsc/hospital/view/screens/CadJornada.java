@@ -29,7 +29,7 @@ public class CadJornada extends HospitalCadPanel {
 
         line3.add(farmaceuticoInput);
 
-        HospitalButton cadastrarButton = new HospitalButton("Cadastrar jornada", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar jornada", null);
         cadastrarButton.setPreferredSize(new Dimension(250, 35));
         cadastrarButton.addActionListener(e -> cadastrarJornada());
 

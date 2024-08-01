@@ -1,5 +1,7 @@
 package br.edu.ifsc.hospital.view.components;
 
+import br.edu.ifsc.hospital.Main;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -15,15 +17,15 @@ public class HospitalButton extends JButton {
     private Color originalBorderColor; // Cor da borda original
     private Boolean isBorderRadius = true;
 
-    public HospitalButton(String texto, Color corFundo, Color corBorda, Color corTexto, Color hoverCorFundo, Dimension tamanho) {
+    public HospitalButton(String texto, Dimension tamanho) {
         setVisible(true);
         setText(texto);
         setContentAreaFilled(false);
         setFocusPainted(false);
-        setBackground(corFundo); // COR DO FUNDO
-        setForeground(corBorda); // COR DA BORDA
-        setTextColor(corTexto);  // COR DO TEXTO
-        setFont(new java.awt.Font("Rethink Sans", Font.PLAIN, 20));
+        setBackground(Main.defaultCyan); // COR DO FUNDO
+        setForeground(Main.defaultCyan); // COR DA BORDA
+        setTextColor(Color.WHITE);  // COR DO TEXTO
+        setFont(new java.awt.Font("Rethink Sans", Font.PLAIN, 14));
         if (tamanho == null) {
             setPreferredSize(new Dimension(200, 35));
         } else {
@@ -31,10 +33,10 @@ public class HospitalButton extends JButton {
         }
         setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        this.originalBackgroundColor = corFundo;
-        this.hoverBackgroundColor = hoverCorFundo;
-        this.originalBorderColor = corBorda;
-        this.hoverBorderColor = hoverCorFundo;
+        this.originalBackgroundColor = Main.defaultCyan;
+        this.hoverBackgroundColor = Main.defaultDarkCyan;
+        this.originalBorderColor = Main.defaultCyan;
+        this.hoverBorderColor = Main.defaultDarkCyan;
 
         addMouseListener(new MouseAdapter() {
             @Override
@@ -48,9 +50,10 @@ public class HospitalButton extends JButton {
             public void mouseExited(MouseEvent e) {
                 setBackground(originalBackgroundColor);
                 setForeground(originalBorderColor);
-                setTextColor(corTexto);
+                setTextColor(Color.WHITE);
             }
         });
+        this.isBorderRadius = isBorderRadius;
     }
 
     public HospitalButton(String texto, Color corFundo, Color corBorda, Color corTexto, Color hoverCorFundo, Dimension tamanho, Boolean isBorderRadius, Integer fontSize) {

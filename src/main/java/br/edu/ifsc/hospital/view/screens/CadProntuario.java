@@ -24,6 +24,7 @@ public class CadProntuario extends HospitalCadPanel {
         HospitalPanel line4 = generateHospitalPanelLine();
 
         line1.add(dataHoraVisitaInput);
+
         line2.add(descricaoVistaInput);
         line3.add(observacaoInput);
         line4.add(statusInput);
