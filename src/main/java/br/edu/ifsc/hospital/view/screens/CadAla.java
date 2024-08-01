@@ -15,7 +15,6 @@ public class CadAla extends HospitalCadPanel {
         super("Cadastrando uma ala");
         HospitalPanel line1 = generateHospitalPanelLine();
         HospitalPanel line2 = generateHospitalPanelLine();
-        HospitalPanel line3 = generateHospitalPanelLine();
 
         line1.add(descricaoInput);
         line2.add(statusInput);
@@ -25,16 +24,17 @@ public class CadAla extends HospitalCadPanel {
         cadastrarButton.addActionListener(e -> cadastrarAla());
 
         HospitalButton limparCampos = new HospitalButton("Limpar campos", Color.WHITE, Color.BLACK, Color.BLACK, Color.BLACK, null, true, 14);
+        HospitalPanel lineButton = generateHospitalPanelLine();
         limparCampos.addActionListener(e -> Main.limparCampos(this));
 
-        line3.add(cadastrarButton);
-        line3.add(limparCampos);
+        lineButton.add(cadastrarButton);
+        lineButton.add(limparCampos);
 
         add(line1);
         add(Box.createVerticalStrut(15));
         add(line2);
         add(Box.createVerticalStrut(15));
-        add(line3);
+        add(lineButton);
     }
 
     private void cadastrarAla() {

@@ -29,7 +29,6 @@ public class CadConsulta extends HospitalCadPanel {
         HospitalPanel line3 = generateHospitalPanelLine();
         HospitalPanel line4 = generateHospitalPanelLine();
         HospitalPanel line5 = generateHospitalPanelLine();
-        HospitalPanel line6 = generateHospitalPanelLine();
 
         HospitalButton cadastrarButton = new HospitalButton("Cadastrar consulta", null);
         cadastrarButton.addActionListener(e -> cadastrarConsulta());
@@ -51,10 +50,11 @@ public class CadConsulta extends HospitalCadPanel {
         line5.add(internacaoInput);
 
         HospitalButton limparCampos = new HospitalButton("Limpar campos", Color.WHITE, Color.BLACK, Color.BLACK, Color.BLACK, null, true, 14);
+        HospitalPanel lineButton = generateHospitalPanelLine();
         limparCampos.addActionListener(e -> Main.limparCampos(this));
 
-        line6.add(cadastrarButton);
-        line6.add(limparCampos);
+        lineButton.add(cadastrarButton);
+        lineButton.add(limparCampos);
 
         add(line1);
         add(Box.createVerticalStrut(15));
@@ -66,7 +66,7 @@ public class CadConsulta extends HospitalCadPanel {
         add(Box.createVerticalStrut(15));
         add(line5);
         add(Box.createVerticalStrut(15));
-        add(line6);
+        add(lineButton);
     }
 
     private void cadastrarConsulta() {
