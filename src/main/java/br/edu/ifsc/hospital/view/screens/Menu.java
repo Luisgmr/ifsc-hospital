@@ -19,8 +19,8 @@ import java.util.List;
 
 public class Menu extends JFrame {
 
-    public static HospitalPanel leftPanel = new HospitalPanel(250, 768, Main.defaultCyan, Main.defaultDarkCyan);
-    static HospitalPanel leftPanelButtons = new HospitalPanel(200, 550);
+    public static HospitalPanel leftPanel = new HospitalPanel(270, 768, Main.defaultCyan, Main.defaultDarkCyan);
+    static HospitalPanel leftPanelButtons = new HospitalPanel(220, 550);
 
     List<HospitalNavButton> listaCad = new ArrayList<>();
 
@@ -32,6 +32,7 @@ public class Menu extends JFrame {
     HospitalNavButton cadLote = new HospitalNavButton("Cadastrar lote", "lote.png");
     HospitalNavButton cadLeito = new HospitalNavButton("Cadastrar leito", "leito.png");
     HospitalNavButton cadQuarto = new HospitalNavButton("Cadastrar quarto", "quarto.png");
+    HospitalNavButton cadAla = new HospitalNavButton("Cadastrar ala", "ala.png");
     HospitalNavButton cadConsulta = new HospitalNavButton("Cadastrar consulta", "consulta.png");
     HospitalNavButton cadExame = new HospitalNavButton("Cadastrar exame", "exame.png");
     HospitalNavButton cadReceita = new HospitalNavButton("Cadastrar receita", "receita.png");
@@ -83,7 +84,7 @@ public class Menu extends JFrame {
 
         leftPanelButtons.add(new HospitalImage(64, 64, "hospital.png", Color.WHITE));
         leftPanelButtons.add(separador);
-        listaCad.addAll(Arrays.asList(cadPessoaNav, cadAcompanhanteNav, cadMedicoNav, cadMedicamento, cadLote, cadLeito, cadQuarto, cadConsulta, cadExame, cadReceita, cadProntuario, cadInternacao, cadLaboratorio));
+        listaCad.addAll(Arrays.asList(cadPessoaNav, cadAcompanhanteNav, cadAla, cadMedicoNav, cadMedicamento, cadLote, cadLeito, cadQuarto, cadConsulta, cadExame, cadReceita, cadProntuario, cadInternacao, cadLaboratorio));
         for (HospitalNavButton navButton : listaCad) {
             leftPanelButtons.add(navButton);
             navButton.addMouseListener(new MouseAdapter() {

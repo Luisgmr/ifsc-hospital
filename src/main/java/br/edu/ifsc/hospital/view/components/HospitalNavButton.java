@@ -11,7 +11,7 @@ import java.awt.event.MouseEvent;
 public class HospitalNavButton extends HospitalPanel {
 
     public HospitalNavButton(String textoLabel, String iconeArquivo) {
-        super(200, 30);
+        super(220, 30);
         HospitalImage icone = new HospitalImage(16, 16, iconeArquivo, Color.WHITE);
         JLabel texto = new JLabel(textoLabel);
         texto.setForeground(Color.WHITE);
