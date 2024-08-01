@@ -24,7 +24,11 @@ public class CadAla extends HospitalCadPanel {
         cadastrarButton.setPreferredSize(new Dimension(160, 35)); // Definindo tamanho para o botão
         cadastrarButton.addActionListener(e -> cadastrarAla());
 
+        HospitalButton limparCampos = new HospitalButton("Limpar campos", Color.WHITE, Color.BLACK, Color.BLACK, Color.BLACK, null, true, 14);
+        limparCampos.addActionListener(e -> Main.limparCampos(this));
+
         line3.add(cadastrarButton);
+        line3.add(limparCampos);
 
         add(line1);
         add(Box.createVerticalStrut(15));

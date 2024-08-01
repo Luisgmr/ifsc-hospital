@@ -32,4 +32,8 @@ public class HospitalComboInput extends HospitalPanel {
 
         add(comboBox);
     }
+
+    public void limparCampo(){
+        comboBox.setSelectedIndex(-1);
+    }
 }

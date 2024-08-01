@@ -3,6 +3,7 @@ package br.edu.ifsc.hospital.view.components;
 import br.edu.ifsc.hospital.view.components.subcomponents.HospitalTextField;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 
 public class HospitalTextInput extends HospitalPanel {
@@ -31,5 +32,11 @@ public class HospitalTextInput extends HospitalPanel {
         textField.setBorder(javax.swing.BorderFactory.createEmptyBorder(5, 10, 5, 5));
 
         add(textField);
+
     }
+
+    public void limparCampo(){
+        textField.setText("");
+    }
+
 }

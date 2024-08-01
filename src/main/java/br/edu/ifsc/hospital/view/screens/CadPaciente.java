@@ -51,7 +51,13 @@ public class CadPaciente extends HospitalCadPanel {
         line5.add(logradouroInput);
         line5.add(complementoInput);
 
-        line6.add(new HospitalButton("Cadastrar paciente", null));
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar paciente", null);
+
+        HospitalButton limparCampos = new HospitalButton("Limpar campos", Color.WHITE, Color.BLACK, Color.BLACK, Color.BLACK, null, true, 14);
+        limparCampos.addActionListener(e -> Main.limparCampos(this));
+
+        line6.add(cadastrarButton);
+        line6.add(limparCampos);
 
         add(line1);
         add(Box.createVerticalStrut(15));

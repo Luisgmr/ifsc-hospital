@@ -29,8 +29,12 @@ public class HospitalNavButton extends HospitalPanel {
                 // Ação a ser executada ao clicar no botão
                 System.out.println(textoLabel + " clicado!");
                 switch (nomeTelaCadastro) {
-                    case "pessoa": Main.getMenu().setMainPanel(new CadPaciente()); break;
-                    case "acompanhante": Main.getMenu().setMainPanel(new CadAcompanhante()); break;
+                    case "pessoa":
+                        Main.getMenu().setMainPanel(new CadPaciente());
+                        break;
+                    case "acompanhante":
+                        Main.getMenu().setMainPanel(new CadAcompanhante());
+                        break;
                     case "ala": Main.getMenu().setMainPanel(new CadAla()); break;
                     case "atendimento": Main.getMenu().setMainPanel(new CadAtendimento()); break;
                     case "consulta": Main.getMenu().setMainPanel(new CadConsulta()); break;

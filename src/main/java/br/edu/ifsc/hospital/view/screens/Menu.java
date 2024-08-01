@@ -13,11 +13,16 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Menu extends JFrame {
 
     public static HospitalPanel leftPanel = new HospitalPanel(250, 768, Main.defaultCyan, Main.defaultDarkCyan);
     static HospitalPanel leftPanelButtons = new HospitalPanel(200, 550);
+
+    List<HospitalNavButton> listaCad = new ArrayList<>();
 
     HospitalPanel separador = new HospitalPanel(200, 20);
     HospitalNavButton cadPessoaNav = new HospitalNavButton("Cadastrar paciente", "pessoa.png");
@@ -59,6 +64,8 @@ public class Menu extends JFrame {
         // Revalida e repinta para atualizar a interface
         revalidate();
         repaint();
+
+        Main.limparCampos(this.mainPanel);
     }
 
     public Menu() throws HeadlessException {
@@ -76,21 +83,19 @@ public class Menu extends JFrame {
 
         leftPanelButtons.add(new HospitalImage(64, 64, "hospital.png", Color.WHITE));
         leftPanelButtons.add(separador);
-
-        leftPanelButtons.add(cadPessoaNav);
-        leftPanelButtons.add(cadAcompanhanteNav);
-        leftPanelButtons.add(cadMedicoNav);
-        leftPanelButtons.add(cadMedicamento);
-        leftPanelButtons.add(cadLote);
-        leftPanelButtons.add(cadLeito);
-        leftPanelButtons.add(cadQuarto);
-        leftPanelButtons.add(cadConsulta);
-        leftPanelButtons.add(cadExame);
-        leftPanelButtons.add(cadReceita);
-        leftPanelButtons.add(cadProntuario);
-        leftPanelButtons.add(cadInternacao);
-        leftPanelButtons.add(cadLaboratorio);
-        leftPanelButtons.add(cadReceita);
+        listaCad.addAll(Arrays.asList(cadPessoaNav, cadAcompanhanteNav, cadMedicoNav, cadMedicamento, cadLote, cadLeito, cadQuarto, cadConsulta, cadExame, cadReceita, cadProntuario, cadInternacao, cadLaboratorio));
+        for (HospitalNavButton navButton : listaCad) {
+            leftPanelButtons.add(navButton);
+            navButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    for (HospitalNavButton navButton : listaCad) {
+                        navButton.setColor1(null);
+                    }
+                    navButton.setColor1(Main.defaultDarkCyan);
+                }
+            });
+        }
 
         leftPanelButtons.setPosition(25, 25);
 
@@ -111,4 +116,5 @@ public class Menu extends JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     }
+
 }

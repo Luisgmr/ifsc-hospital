@@ -50,7 +50,11 @@ public class CadConsulta extends HospitalCadPanel {
         line5.add(receitaInput);
         line5.add(internacaoInput);
 
+        HospitalButton limparCampos = new HospitalButton("Limpar campos", Color.WHITE, Color.BLACK, Color.BLACK, Color.BLACK, null, true, 14);
+        limparCampos.addActionListener(e -> Main.limparCampos(this));
+
         line6.add(cadastrarButton);
+        line6.add(limparCampos);
 
         add(line1);
         add(Box.createVerticalStrut(15));
