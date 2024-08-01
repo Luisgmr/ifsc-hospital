@@ -74,8 +74,9 @@ public class Menu extends JFrame {
     }
 
     private void init() {
+        setIconImage(new ImageIcon("src/main/java/br/edu/ifsc/hospital/view/resource/icons/icon.png").getImage());
         setVisible(true);
-        setTitle("Hospital");
+        setTitle("Hospital do IFSC");
         setSize(new Dimension(1024, 768));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
