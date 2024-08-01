@@ -61,7 +61,6 @@ public class HospitalPanel extends JPanel {
 
     public void setColor1(Color color1) {
         this.color1 = color1;
-        repaint();
     }
 
     public Color getColor2() {

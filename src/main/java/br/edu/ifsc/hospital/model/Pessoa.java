@@ -9,16 +9,14 @@ public class Pessoa {
 	private String cpfCnpj;
 	private String rgInscricaoEstadual;
 	private String dataCadastro;
+	private String endereco;
 	private String cep;
 	private String cidade;
 	private String bairro;
 	private String logradouro;
 	private String complemento;
-	
-	
-	public Pessoa(String id, String nome, String fone1, String fone2, String email, String cpfCnpj,
-			String rgInscricaoEstadual, String dataCadastro, String cep, String cidade, String bairro,
-			String logradouro, String complemento) {
+
+	public Pessoa(String id, String nome, String fone1, String fone2, String email, String cpfCnpj, String rgInscricaoEstadual, String dataCadastro, String endereco, String cep, String cidade, String bairro, String logradouro, String complemento) {
 		this.id = id;
 		this.nome = nome;
 		this.fone1 = fone1;
@@ -27,13 +25,13 @@ public class Pessoa {
 		this.cpfCnpj = cpfCnpj;
 		this.rgInscricaoEstadual = rgInscricaoEstadual;
 		this.dataCadastro = dataCadastro;
+		this.endereco = endereco;
 		this.cep = cep;
 		this.cidade = cidade;
 		this.bairro = bairro;
 		this.logradouro = logradouro;
 		this.complemento = complemento;
 	}
-
 
 	public String getId() {
 		return id;
@@ -164,4 +162,11 @@ public class Pessoa {
 		this.complemento = complemento;
 	}
 
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
 }
