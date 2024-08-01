@@ -17,6 +17,7 @@ public class HospitalNavButton extends HospitalPanel {
         texto.setForeground(Color.WHITE);
         texto.setFont(new Font("Rethink Sans", 1, 15));
 
+        add(Box.createHorizontalStrut(2));
         add(icone);
         add(texto);
 
