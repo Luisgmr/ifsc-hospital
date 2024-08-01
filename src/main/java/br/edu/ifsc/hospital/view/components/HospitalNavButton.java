@@ -1,8 +1,7 @@
 package br.edu.ifsc.hospital.view.components;
 
 import br.edu.ifsc.hospital.Main;
-import br.edu.ifsc.hospital.view.screens.CadAcompanhante;
-import br.edu.ifsc.hospital.view.screens.CadPaciente;
+import br.edu.ifsc.hospital.view.screens.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,12 +29,25 @@ public class HospitalNavButton extends HospitalPanel {
                 // Ação a ser executada ao clicar no botão
                 System.out.println(textoLabel + " clicado!");
                 switch (nomeTelaCadastro) {
-                    case "pessoa":
-                        Main.getMenu().setMainPanel(new CadPaciente());
-                        break;
-                    case "acompanhante":
-                        Main.getMenu().setMainPanel(new CadAcompanhante());
-                        break;
+                    case "pessoa": Main.getMenu().setMainPanel(new CadPaciente()); break;
+                    case "acompanhante": Main.getMenu().setMainPanel(new CadAcompanhante()); break;
+                    case "ala": Main.getMenu().setMainPanel(new CadAla()); break;
+                    case "atendimento": Main.getMenu().setMainPanel(new CadAtendimento()); break;
+                    case "consulta": Main.getMenu().setMainPanel(new CadConsulta()); break;
+                    case "enfermeiro": Main.getMenu().setMainPanel(new CadEnfermeiro()); break;
+                    case "exame": Main.getMenu().setMainPanel(new CadExame()); break;
+                    case "farmaceutico": Main.getMenu().setMainPanel(new CadFarmaceutico()); break;
+                    case "fornecedor": Main.getMenu().setMainPanel(new CadFornecedor()); break;
+                    case "internacao": Main.getMenu().setMainPanel(new CadInternacao()); break;
+                    case "jornada": Main.getMenu().setMainPanel(new CadJornada()); break;
+                    case "laboratorio": Main.getMenu().setMainPanel(new CadLaboratorio()); break;
+                    case "leito": Main.getMenu().setMainPanel(new CadLeito()); break;
+                    case "lote": Main.getMenu().setMainPanel(new CadLote()); break;
+                    case "medicamento": Main.getMenu().setMainPanel(new CadMedicamento()); break;
+                    case "medico": Main.getMenu().setMainPanel(new CadMedico()); break;
+                    case "prontuario": Main.getMenu().setMainPanel(new CadProntuario()); break;
+                    case "quarto": Main.getMenu().setMainPanel(new CadQuarto()); break;
+                    case "receita": Main.getMenu().setMainPanel(new CadReceita()); break;
                 }
             }
 

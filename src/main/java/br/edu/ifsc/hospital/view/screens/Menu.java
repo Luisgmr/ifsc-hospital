@@ -102,6 +102,8 @@ public class Menu extends JFrame {
         mainPanel.setSize(getWidth() - leftPanel.getWidth(), getHeight());
         add(mainPanel);
 
+        System.out.println(mainPanel.getWidth() + " " + mainPanel.getHeight());
+
         System.out.println(leftPanel.getLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

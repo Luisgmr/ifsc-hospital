@@ -6,12 +6,10 @@ import br.edu.ifsc.hospital.view.components.*;
 import javax.swing.*;
 import java.awt.*;
 
-public class CadPaciente extends HospitalCadPanel {
+public class CadMedico extends HospitalCadPanel {
 
     private HospitalTextInput nomeInput = new HospitalTextInput("Nome", 280);
-    private HospitalTextInput nomeSocialInput = new HospitalTextInput("Nome social", 280);
-    private HospitalComboInput tipoSanguineoInput = new HospitalComboInput("Tipo sanguíneo", new String[] {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"}, 95);
-    private HospitalComboInput sexoInput = new HospitalComboInput("Sexo", new String[] {"Masculino", "Feminino"}, 160);
+    private HospitalTextInput nomeSocialInput = new HospitalTextInput("Nome Social", 280);
     private HospitalTextInput cpfCnpjInput = new HospitalTextInput("CPF", 180);
     private HospitalTextInput rgInput = new HospitalTextInput("RG", 150);
     private HospitalTextInput fonePrimarioInput = new HospitalTextInput("Fone 1", 120);
@@ -22,9 +20,14 @@ public class CadPaciente extends HospitalCadPanel {
     private HospitalTextInput bairroInput = new HospitalTextInput("Bairro", 180);
     private HospitalTextInput logradouroInput = new HospitalTextInput("Logradouro", 350);
     private HospitalTextInput complementoInput = new HospitalTextInput("Complemento", 220);
+    private HospitalTextInput crmInput = new HospitalTextInput("CRM", 150);
+    private HospitalTextInput loginInput = new HospitalTextInput("Login", 150);
+    private HospitalTextInput senhaInput = new HospitalTextInput("Senha", 150);
+//    private HospitalPasswordInput senhaInput = new HospitalPasswordInput("Senha", 150);
 
-    public CadPaciente() {
-        super("Cadastrando um paciente");
+    public CadMedico() {
+        super("Cadastrando um médico");
+
         HospitalPanel line1 = generateHospitalPanelLine();
         HospitalPanel line2 = generateHospitalPanelLine();
         HospitalPanel line3 = generateHospitalPanelLine();
@@ -35,14 +38,12 @@ public class CadPaciente extends HospitalCadPanel {
         line1.add(nomeInput);
         line1.add(nomeSocialInput);
 
-        line2.add(sexoInput);
-        line2.add(tipoSanguineoInput);
         line2.add(cpfCnpjInput);
         line2.add(rgInput);
+        line2.add(fonePrimarioInput);
+        line2.add(foneSecundarioInput);
 
         line3.add(emailInput);
-        line3.add(fonePrimarioInput);
-        line3.add(foneSecundarioInput);
 
         line4.add(cepInput);
         line4.add(cidadeInput);
@@ -51,7 +52,16 @@ public class CadPaciente extends HospitalCadPanel {
         line5.add(logradouroInput);
         line5.add(complementoInput);
 
-        line6.add(new HospitalButton("Cadastrar paciente", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14));
+        line6.add(crmInput);
+        line6.add(loginInput);
+        line6.add(senhaInput);
+
+        HospitalButton cadastrarButton = new HospitalButton("Cadastrar médico", Main.defaultCyan, Main.defaultCyan, Color.WHITE, Main.defaultDarkCyan, null, true, 14);
+        cadastrarButton.setPreferredSize(new Dimension(250, 35));
+        cadastrarButton.addActionListener(e -> cadastrarMedico());
+
+        HospitalPanel lineButton = generateHospitalPanelLine();
+        lineButton.add(cadastrarButton);
 
         add(line1);
         add(Box.createVerticalStrut(15));
@@ -64,5 +74,11 @@ public class CadPaciente extends HospitalCadPanel {
         add(line5);
         add(Box.createVerticalStrut(15));
         add(line6);
+        add(Box.createVerticalStrut(15));
+        add(lineButton);
+    }
+
+    private void cadastrarMedico() {
+        // Implementar lógica de cadastro do médico
     }
 }
